@@ -10,6 +10,12 @@
   margin-top: 0;
   margin-bottom: 10px;
 }
+.headerName {
+  color: rgb(0, 0, 0);
+}
+.name {
+  color: rgb(216, 130, 0);
+}
 .headerText {
   font-weight: 700;
   display: flex;
