@@ -1,0 +1,48 @@
+.userContainerList {
+  display: grid;
+  grid-template-columns: repeat(2, 480px);
+  grid-column-gap: 35px;
+  grid-row-gap: 35px;
+
+  margin: 0 auto;
+
+  width: 1050px;
+
+  padding-left: 0;
+  list-style: none;
+}
+.userList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(47, 98, 175);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  border-radius: 10px;
+}
+.containerUserInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid black;
+}
+.userName {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  color: rgb(216, 130, 0);
+}
+.userBirth_year {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgb(58, 58, 58);
+
+  font-size: 20px;
+}
