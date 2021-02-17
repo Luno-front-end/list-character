@@ -27,9 +27,9 @@ export default function UserList({ charactersList }) {
                 <h1 className={s.userName}>Name: {name}</h1>
                 <p className={s.userBirth_year}>Birth year: {birth_year}</p>
               </div>
-
-              <Comments userId={id} visibleComments={visibleComments} />
-
+              {comentsInfo && (
+                <Comments userId={id} visibleComments={visibleComments} />
+              )}
               <CommentForm id={id} onSubmit={addComment} />
             </li>
           ))}
