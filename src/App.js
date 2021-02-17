@@ -13,7 +13,6 @@ export default function App() {
       results.map((element) => (element.id = shortid.generate()));
 
       setCharacters(results);
-      console.log(results);
     });
   }, []);
 

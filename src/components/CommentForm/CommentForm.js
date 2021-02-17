@@ -5,21 +5,45 @@ import s from "./CommentForm.module.css";
 
 export default function CommentForm({ id, onSubmit }) {
   const [commentValue, setCommentValue] = useState("");
+  const [nameValue, setNameValue] = useState("");
 
   const ComentsValues = (e) => {
-    const { value } = e.currentTarget;
+    const { name, value } = e.currentTarget;
 
-    setCommentValue(value);
+    switch (name) {
+      case "name":
+        setNameValue(value);
+        break;
+      case "comment":
+        setCommentValue(value);
+        break;
+      default:
+        break;
+    }
   };
   function addComment(e) {
     e.preventDefault();
-    onSubmit({ id, commentValue });
+    onSubmit({ id, nameValue, commentValue });
+
+    setCommentValue("");
+    setNameValue("");
   }
 
   const idComments = shortid.generate();
+  const idName = shortid.generate();
 
   return (
     <form className={s.form} onSubmit={addComment}>
+      <label htmlFor={idName} className={s.leableName}>
+        You name
+      </label>
+      <input
+        type="text"
+        name="name"
+        id={idName}
+        onChange={ComentsValues}
+        value={nameValue}
+      />
       <label htmlFor={idComments} className={s.leableName}>
         Write a comment
       </label>
